@@ -59,7 +59,7 @@ class Rectangle:
         """ Returning a string pintable presentation of the rectangle.
         Using the #character to represent the rectangle"""
         if self.width == 0 or self.height == 0:
-            return ("")
+            return ""
 
         """Initialize an empty string representation of the rectangle"""
         rect = ""
