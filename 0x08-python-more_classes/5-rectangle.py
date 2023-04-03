@@ -71,7 +71,8 @@ class Rectangle:
         return rect
 
     def __repr__(self):
-        """Return string representation of rectangle. Also able to create new instance applying eval()"""
+        """Return string representation of rectangle.
+        Also able to create new instance applying eval()"""
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
