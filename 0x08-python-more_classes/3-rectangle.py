@@ -62,17 +62,10 @@ class Rectangle:
             return None
 
         """Initialize an empty string representation of the rectangle"""
-        rect_str = ""
-
-        """Loop over every rectangle's row"""
+        rect = ""
         for i in range(self.height):
-            """ Add a '#' character string for the current row"""
             row_str = "#" * self.__width
-            rect_str += row_str
-
-            """Add newline character if this isn't last row"""
+            rect += row_str
             if i != self.__height -1:
-                rect_str += "\n"
-
-        """Return final string"""
-        return rect_str
+                rect += "\n"
+        return rect
