@@ -4,9 +4,12 @@
 
 class Rectangle:
     """ Representation of an empty class Rectangle
-    Public class attribute number_of_instances: """
+    Public class attribute number_of_instances initialized to 0, incrementing/ decrementing.
+    Public class attribute print_symbol initialized to # of any type.
+    """
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """ Initialization of a new rectangle.
