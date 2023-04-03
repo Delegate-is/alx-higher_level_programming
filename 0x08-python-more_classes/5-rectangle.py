@@ -59,7 +59,7 @@ class Rectangle:
         """ Returning a string pintable presentation of the rectangle.
         Using the #character to represent the rectangle"""
         if self.width == 0 or self.height == 0:
-            return None
+            return ("")
 
         """Initialize an empty string representation of the rectangle"""
         rect = ""
@@ -73,7 +73,7 @@ class Rectangle:
     def __repr__(self):
         """Return string representation of rectangle.
         Also able to create new instance applying eval()"""
-        return f"Rectangle({self.__width}{self.__height})"
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         """ Return message when instance of the rectangle is deleted"""
