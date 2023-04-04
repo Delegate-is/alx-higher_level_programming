@@ -1,0 +1,65 @@
+
+Deploying and using 3-say_my_name.py
+====================================
+
+The module is defining a function ``def say_my_name(first_name, last_name=""):``
+
+Using ``say_my_name(...)``
+-----------------------
+
+``say_my_name(...)`` will print "My name is <first name> <last name>"
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("Kelvin", "Juma")
+    My name is Kelvin Juma
+
+::
+
+    >>> say_my_name("Billy Kimber", "Jackson")
+    My name is Billy Kimber Jackson
+
+``last_name`` parameter is not mandatory. Where not provided, an empty string is returned instead.
+
+::
+
+    >>> say_my_name("Max")
+    My name is Max 
+
+Invalid Names
+-------------
+
+The ``last_name`` and ``first_name`` parameters must be strings. Otherwise, raise TypeError.
+
+::
+
+    >>> say_my_name(9, "Jackson")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+     >>> say_my_name("Big", 5)
+     Traceback (most recent call last):
+     TypeError: last_name must be a string
+
+::
+
+    >>> say_my_name({"Austin": 3, "Kevin": 1}, 4)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+There must be at least one parameter named.
+
+::
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
