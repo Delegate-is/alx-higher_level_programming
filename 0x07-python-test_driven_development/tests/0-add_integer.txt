@@ -7,50 +7,50 @@ Using ``add_integer``
 ---------------------
 
 ``add_integer(....)``` will pass two variable arguments and return the addition.
-Number's value is equivalent to deployment of the ``+`` operator.
+Numbers value is equivalent to using of the ``+`` operator.
 
 ::
 
-        >>>add_integer = __import__('0-add_integer').add_integer
+        >>> add_integer = __import__('0-add_integer').add_integer
         >>> add_integer(2, 3)
         5
 
 ::
 
-        >>>add_integer(2, -3)
+        >>> add_integer(2, -3)
         -1
 
 ``add_integer``` function works with floats still.
 
 ::
 
-        >>>add_integer(2.0, 3.0)
+        >>> add_integer(2.0, 3.0)
         5
 
 Function casts floats into integers before executing.
 
 ::
 
-        >>>add_integer(2.9, 0.2)
+        >>> add_integer(2.9, 0.2)
         2
 
 ::
 
-        >>>add_integer(-2.9, -0.2)
+        >>> add_integer(-2.9, -0.2)
         -2
 
 Adding and combing floats and integers.
 
 ::
 
-        >>>add_integer(2.3, -3)
+        >>> add_integer(2.3, -3)
         -1
 
 Second optional argument is 98 by default.
 
 ::
 
-        add_integer(2)
+        >>> add_integer(2)
         100
 
 Not Numbers
@@ -60,25 +60,25 @@ TypeError is raised if either of the arguments is non-float or non-integer.
 
 ::
 
-        >>>add_integer("min", 1)
+        >>> add_integer("min", 1)
         Traceback (most recent call last):
         TypeError: a must be an integer
 
 ::
 
-        >>>add_integer(4, "max")
+        >>> add_integer(4, "max")
         Traceback (most recent call last):
         TypeError: b must be an integer
 
 ::
 
-        >>>add_integer(None)
+        >>> add_integer(None)
         Traceback (most recent call last):
         TypeError: a must be an integer
 
 ::
 
-        >>>add_integer(7, None)
+        >>> add_integer(7, None)
         Traceback (most recent call last):
         TypeError: b must be an integer
 
@@ -87,7 +87,7 @@ TypeError returns only for the first argument.
 
 ::
 
-        >>>add_integer("zoom", "here")
+        >>> add_integer("zoom", "here")
         Traceback (most recent call last):
         TypeError: a must be an integer
 
@@ -95,13 +95,13 @@ Function fails if infinity is provided.
 
 ::
 
-        >>>add_integer(float('inf')
+        >>> add_integer(float('inf'))
         Traceback (most recent call last):
         OverflowError: cannot convert float infinity to integer
 
 ::
 
-        >>>add_integer(5, float('inf')
+        >>> add_integer(5, float('inf'))
         Traceback (most recent call last):
         OverflowError: cannot convert float infinity to integer
 
@@ -109,12 +109,12 @@ Not a Number
 
 ::
 
-        >>>add_integer(float('NaN')
+        >>> add_integer(float('NaN'))
         Traceback (most recent call last):
         ValueError: cannot convert float NaN to integer
 
 ::
 
-        >>>add_integer(5, float('NaN')
+        >>> add_integer(5, float('NaN'))
         Traceback (most recent call last):
         ValueError: cannot convert float NaN to integer
