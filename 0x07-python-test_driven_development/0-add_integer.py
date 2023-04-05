@@ -6,12 +6,12 @@ def add_integer(a, b=98):
     """ Adding two integers or floats and return result.
 
     Parameters:
-        @ a: First number to add either integer or float
-        @ b: Second number to add either integer or float
-    
-    Function casts floats into integers before executing.
+        @a: First number to add either integer or float
+        @b: Second number to add either integer or float
 
-    TypeError: raised if either of the arguments is non-float or non-integer.
+    Function casts floats into integers before executing.
+    TypeError: raised if either of the arguments is
+    non-float or non-integer.
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
