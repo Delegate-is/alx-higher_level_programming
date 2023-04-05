@@ -10,9 +10,8 @@ def add_integer(a, b=98):
         @ b: Second number to add either integer or float
     
     Function casts floats into integers before executing.
-    
-    TypeError: raised if either of the arguments is 
-    non-float or non-integer.
+
+    TypeError: raised if either of the arguments is non-float or non-integer.
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
