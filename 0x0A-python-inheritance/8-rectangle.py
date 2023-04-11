@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
 """
 Class Rectangle inheriting from BaseGeometry class
 """
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
@@ -10,7 +10,7 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """
-        Width and height instantiation
+        Rectangle class initialization
 
         Args;
         @width: private instance attribute
