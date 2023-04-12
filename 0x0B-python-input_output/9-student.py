@@ -4,10 +4,10 @@ Class Student
 """
 
 
-clas Student:
-    """initialization of student class"""
+class Student:
+    """Student class representation"""
     def __init__(self, first_name, last_name, age):
-        """function defines Student class attributes"""
+        """function initializing Student class"""
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
