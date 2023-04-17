@@ -3,7 +3,7 @@ from models.base import Base
 """Inherits from Base class"""
 
 
-class Rectangle:
+class Rectangle(Base):
     """Defining a rectangle class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
