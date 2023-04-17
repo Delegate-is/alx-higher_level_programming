@@ -16,39 +16,39 @@ class Rectangle(Base):
         private attributes with own public setter and getter
         """
         super().__init__(id)
-        self.width
-        self.height
-        self.x
-        self.y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
-    def name(self):
+    def width(self):
         return self.__width
 
     @property
-    def name(self):
+    def height(self):
         return self.__height
 
     @property
-    def name(self):
+    def x(self):
         return self.__x
 
     @property
-    def name(self):
+    def y(self):
         return self.__y
 
     @width.setter
-    def name(self, value):
+    def width(self, value):
         self.__width = value
 
     @height.setter
-    def name(self, value):
+    def height(self, value):
         self.__height = value
 
     @x.setter
-    def name(self, value):
+    def x(self, value):
         self.__x = value
 
     @y.setter
-    def name(self, value):
+    def y(self, value):
         self.__y = value
