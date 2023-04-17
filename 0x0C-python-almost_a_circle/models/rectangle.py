@@ -15,6 +15,9 @@ class Rectangle(Base):
             @y
             @id
         private attributes with own public setter and getter
+        adding validation
+        if non integer, raise TypeError
+        if < 0, raise Value Error
         """
         self.width = width
         self.height = height
