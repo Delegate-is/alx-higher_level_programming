@@ -15,9 +15,6 @@ class Rectangle(Base):
             @y
             @id
         private attributes with own public setter and getter
-        adding validation
-        if non integer, raise TypeError
-        if < 0, raise Value Error
         """
         self.width = width
         self.height = height
@@ -67,7 +64,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-         if type(value) != int:
+        if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
