@@ -21,6 +21,7 @@ class Square(Rectangle):
             TypeError if input is non integer.
             ValueError if either width or height equals or is under zero.
         """
+        self.size = size
         super().__init__(size, size, x, y, id)
 
     @property
@@ -38,6 +39,26 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def update(self, *args, **kwargs):
+        """Update the attributes of the Square.
+
+        Args:
+            args (tuple): The new values for the attributes, in the order:
+                - id
+                - size
+                - x
+                - y
+            kwargs (dict): The new values for the attributes, as keyword arguments.
+
+        Returns:
+            None
+        """
+        attrs = ['id', 'size', 'x', 'y']
+        for i, arg in enumerate(args):
+            setattr(self, attrs[i], arg)
+        for k, v in kwargs.items():
+            setattr(self, k, v)
+
     def __str__(self):
         """Returning str() and print() Square representation"""
         return "[Square] ({}) {}/{} - {}".format(
@@ -45,7 +66,9 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """Returning Square dictionary representation"""
-        return {'id': self.id,
-                'size': self.__size,
-                'x': self.__x,
-                'y': self.__y}
+        return {
+                'id': self.id,
+                'size': self.size,
+                'x': self.x,
+                'y': self.y
+        }
