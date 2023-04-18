@@ -1,28 +1,31 @@
 #!/usr/bin/python3
 """
-Containing Square class
+Module containing Rectangle
+Inheriting from the Rectangle class
 """
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Representing the class square."""
+    """Representation of the Square."""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """Initializing Square.
+        """Initializing the Square.
         Args:
-            size
-            x 
-            y
-            id  
+            @size: Square's size
+            @x: coordinate x
+            @y: coordinate y
+            @id: Square identity
         """
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
+        """Representation of the Square size"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """Getting or setting Square's size"""
         self.width = value
         self.height = value
