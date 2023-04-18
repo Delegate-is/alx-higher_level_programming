@@ -1,20 +1,27 @@
 #!/usr/bin/python3
-"""Defines a rectangle class"""
+"""
+Module containing Base
+Rectangle class inheriting from Base class
+"""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Representing a rectangle class"""
+    """Representation of the rectangle class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializing the class Rectangle
         Args:
-            @width
-            @height
-            @x
-            @y
-            @id
+            @width(int): Rectangle width
+            @height(int): Rectangle height
+            @x(int): x coordinate
+            @y(int): y coordinate
+            @id(int): Rectangle idedntity
         private attributes with own public setter and getter
+        Raises:
+            TypeError if input is non integer.
+            ValueError if either width or height equals or is under zero.
+            ValueError if either x or y is under zero.
         """
         self.width = width
         self.height = height
@@ -24,6 +31,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """Getting or setting Rectangle's width"""
         return self.__width
 
     @width.setter
@@ -36,6 +44,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """Getting or setting Rectangle's height"""
         return self.__height
 
     @height.setter
@@ -48,6 +57,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """Getting or  setting x coordinate"""
         return self.__x
 
     @x.setter
@@ -60,6 +70,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """Getting or setting y coordinate"""
         return self.__y
 
     @y.setter
@@ -71,9 +82,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """Return Rectangle's area"""
         return self.width * self.height
 
     def display(self):
+        """Printing Rectangle with # operator"""
         if self.width == 0 or self.height == 0:
             print("")
             return
