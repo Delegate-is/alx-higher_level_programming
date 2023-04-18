@@ -29,3 +29,12 @@ class Square(Rectangle):
         """Getting or setting Square's size"""
         self.width = value
         self.height = value
+
+    def __str__(self):
+        """Returning str() and print() Square representation"""
+        return "[Square] ({}) {}/{}".format(self.id, self.x, self.y, self.size)
+
+    def to_dictionary(self):
+        """Returning Square dictionary representation"""
+        attrs = ["id", "width", "height", "x", "y"]
+        return {attr: getattr(self, attr) for attr in attrs}
