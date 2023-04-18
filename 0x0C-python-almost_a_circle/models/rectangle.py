@@ -101,3 +101,8 @@ class Rectangle(Base):
         """Returning a print() and str() representation of rectangle"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
+
+    def to_dictionary(self):
+        """Retuning a dictionary respresentation of the Rectangle"""
+        attrs = ["id", "width", "height", "x", "y"]
+        return {attr: getattr(self, attr) for attr in attrs}
