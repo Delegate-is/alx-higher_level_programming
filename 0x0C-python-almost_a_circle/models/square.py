@@ -48,7 +48,8 @@ class Square(Rectangle):
                 - size
                 - x
                 - y
-            kwargs (dict): The new values for the attributes, as keyword arguments.
+            kwargs (dict): The new values for the attributes,
+            as keyword arguments.
 
         Returns:
             None
