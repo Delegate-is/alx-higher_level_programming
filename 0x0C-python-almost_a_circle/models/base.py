@@ -49,8 +49,8 @@ class Base:
         json_list = []
         for obj in list_objs:
             json_list.append(obj.to_dictionary())
-        with open(filename, "w", encoding="utf-8") as file
-        file.write(cls.to_json_string(json_list))
+        with open(filename, "w", encoding="utf-8") as myfile:
+            myfile.write(cls.to_json_string(json_list))
 
     @staticmethod
     def from_json_string(json_string):
