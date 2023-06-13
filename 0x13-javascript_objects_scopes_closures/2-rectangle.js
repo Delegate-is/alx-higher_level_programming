@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-class Resctangle {
+class Rectangle {
 	if (w => 0 && h => 0){
 		constructor (w, h) {
 			this.width = w;
