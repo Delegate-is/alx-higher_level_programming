@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Script taking in an argumen, displays all values in the states table 
+Script taking in an argument, displays all values in the states table
 Of hbtn_0e_0_usa where name matches the argument
 """
 
