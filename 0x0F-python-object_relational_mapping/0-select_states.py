@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-#Script listing every state from the database hbtn_0e_0_usa:
+"""
+Script listing every state from the database hbtn_0e_0_usa:
+"""
 import MySQLdb
 import sys
 
