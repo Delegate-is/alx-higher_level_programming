@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-
+"""
+Writing script taking arguments and displays all values in the states
+table of hbtn_0e_0_usa
+""""
 
 import MySQLdb
 from sys import argv
